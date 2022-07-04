@@ -33,8 +33,9 @@ body {
 .truth {
     width: 48%;
     height: 100%;
+    margin-top: 7px;
     background-color: #fff;
-    &:hover {
+    &:active {
         box-shadow: 0px 0px 36px 10px  rgba(235, 56, 153, 1.2);
         width: 48vw;
         height: 38vh;
@@ -45,17 +46,18 @@ body {
         border-radius: 30px;
         border: 1px solid rgba(255, 255, 255, 0.21);
         transition: 0.2s;
-        background-image: url(/assets/Icon-verdad.svg);
+        /* background-image: url(/assets/Icon-verdad.svg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center; */
     }
 }
 
 .dare{
     width: 48%;
     height: 100%;
+    margin-top: 7px;
     background-color: #fff;
-    &:hover {
+    &:active {
         box-shadow: 0px 0px 36px 10px  rgba(31, 38, 255, 1.2);
         width: 48vw;
         height: 38vh;
@@ -66,9 +68,9 @@ body {
         border-radius: 30px;
         border: 1px solid rgba(255, 255, 255, 0.21);
         transition: 0.2s;
-        background-image: url(/assets/Icon-Reto.svg);
+        /* background-image: url(/assets/Icon-Reto.svg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center; */
     }
 }
 
@@ -95,6 +97,19 @@ body {
         background-color: #1E75D1;
         filter: blur(5px);
         border-radius: 50% 25%;
+    }
+}
+
+.img {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    width: 100vw;
+    height:35vh;
+    img{
+        margin-left: 30px;
     }
 }
 
