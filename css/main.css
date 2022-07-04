@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2B2D42;
+  width: 100vw;
+  height: 100vh;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 45vh;
+}
+
+.btn {
+  display: flex;
+  width: 100vw;
+  height: 35vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.truth {
+  width: 48%;
+  height: 100%;
+  background-color: #fff;
+}
+.truth:hover {
+  box-shadow: 0px 0px 36px 10px rgb(235, 56, 153);
+  width: 48vw;
+  height: 38vh;
+}
+.truth, .truth::before, .truth::after {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 25px 0 rgba(238, 50, 135, 0.37);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.21);
+  transition: 0.2s;
+  background-image: url(/assets/Icon-verdad.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dare {
+  width: 48%;
+  height: 100%;
+  background-color: #fff;
+}
+.dare:hover {
+  box-shadow: 0px 0px 36px 10px rgb(31, 38, 255);
+  width: 48vw;
+  height: 38vh;
+}
+.dare, .dare::before, .dare::after {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 25px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.21);
+  transition: 0.2s;
+  background-image: url(/assets/Icon-Reto.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.back {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  z-index: -1;
+  width: 100vw;
+  height: 35vh;
+}
+.back .one {
+  width: 38%;
+  height: 55%;
+  align-self: center;
+  background-color: #EE3283;
+  filter: blur(5px);
+  border-radius: 50% 25%;
+}
+.back .two {
+  width: 38%;
+  height: 55%;
+  align-self: center;
+  background-color: #1E75D1;
+  filter: blur(5px);
+  border-radius: 50% 25%;
+}
+
+.players {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
+}
+
+.players__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 5px;
+  width: 300px;
+  height: 87%;
+  background-color: #2B2D42;
+  box-shadow: inset 0px 0px 4px 5px #1B1C2B;
+  border-radius: 15px;
+}
+
+.player {
+  width: 250px;
+  height: 20%;
+  margin-top: 7px;
+  background-color: #2B2D42;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #A0C4FF;
+  border-radius: 15px;
+}/*# sourceMappingURL=main.css.map */
