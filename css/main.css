@@ -103,9 +103,12 @@ body {
   justify-content: space-around;
   width: 100vw;
   height: 35vh;
+  z-index: -1;
+  filter: contrast(140%);
 }
 .img img {
   margin-left: 30px;
+  height: 32%;
 }
 
 .players {
@@ -114,13 +117,24 @@ body {
   align-items: center;
   height: 55vh;
 }
+.players button {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  align-self: flex-start;
+  background-color: #2B2D42;
+  border-style: none;
+  top: 40%;
+  right: 3%;
+  opacity: 80%;
+}
 
 .players__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 5px;
-  width: 300px;
+  width: 85%;
   height: 87%;
   background-color: #2B2D42;
   box-shadow: inset 0px 0px 4px 5px #1B1C2B;
@@ -128,12 +142,33 @@ body {
 }
 
 .player {
-  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82%;
   height: 20%;
+  font-size: 3em;
+  font-family: "Fredoka One", cursive;
   margin-top: 7px;
   background-color: #2B2D42;
   border-style: solid;
   border-width: 5px;
   border-color: #A0C4FF;
   border-radius: 15px;
+}
+.player.player-1 {
+  border-color: #FFADAD;
+  color: #FFADAD;
+}
+.player.player-2 {
+  border-color: #A0C4FF;
+  color: #A0C4FF;
+}
+.player.player-3 {
+  border-color: #FDFFB6;
+  color: #FDFFB6;
+}
+.player.player-4 {
+  border-color: #FFC6FF;
+  color: #FFC6FF;
 }/*# sourceMappingURL=main.css.map */
