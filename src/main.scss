@@ -116,6 +116,32 @@ body {
     }
 }
 
+.recharge {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 125px;
+    height: 10%;
+    top: 38%;
+    .start {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 125px;
+        height: 65%;
+        background-color: transparent;
+        border: none;
+        color: #CE4257;
+        background-color: #1c2022;
+        font-size: 1.7rem;
+        border: solid 2px #CE4257;
+        border-radius: 15px;
+        &:active {
+            box-shadow: 0px 0px 15px 4px #CE4257;
+        }
+    }
+}
+
 .players {
     display: flex;
     justify-content: center;
@@ -126,11 +152,13 @@ body {
         width: 35px;
         height: 35px;
         align-self: flex-start;
-        background-color: #2B2D42;
+        background-color: transparent;
         border-style: none;
-        top: 40%;
+        cursor: pointer;
+        top: 42%;
         right: 3%;
         opacity: 80%;
+        background-image: url(/assets/up-right-and-down-left-from-center-solid.svg);
     }
 }
 
@@ -152,7 +180,7 @@ body {
     align-items: center;
     width: 82%;
     height: 20%;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Fredoka One', cursive;
     margin-top: 7px;
     background-color: $body;
