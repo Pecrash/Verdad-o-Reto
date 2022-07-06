@@ -1,3 +1,4 @@
+/* @import 'modal-window'; */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -117,7 +118,7 @@ body {
   align-items: center;
   width: 125px;
   height: 10%;
-  top: 38%;
+  top: 38vh;
 }
 .recharge .start {
   display: flex;
@@ -130,6 +131,7 @@ body {
   color: #CE4257;
   background-color: #1c2022;
   font-size: 1.7rem;
+  font-family: "Fredoka", sans-serif;
   border: solid 2px #CE4257;
   border-radius: 15px;
 }
@@ -154,7 +156,9 @@ body {
   top: 42%;
   right: 3%;
   opacity: 80%;
-  background-image: url(/assets/up-right-and-down-left-from-center-solid.svg);
+}
+.players button i {
+  font-size: 30px;
 }
 
 .players__container {
