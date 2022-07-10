@@ -1,4 +1,137 @@
-/* @import 'modal-window'; */
+.blur {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+  filter: blur(10px);
+}
+
+.modal-container {
+  position: fixed;
+  width: 80vw;
+  height: 80vh;
+  top: 10%;
+  left: 10%;
+  background-color: #1c2022;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease all;
+  transform: scale(0.7);
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-container .kind {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  color: rgb(208, 208, 208);
+  font-family: "Fredoka", sans-serif;
+  font-weight: bold;
+  font-size: 33px;
+}
+.modal-container .kind h1 {
+  opacity: 0;
+}
+.modal-container .text {
+  position: absolute;
+  word-break: normal;
+  top: 35%;
+  right: 5%;
+  left: 7%;
+  color: rgb(208, 208, 208);
+  font-family: "Fredoka", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.8s ease all;
+}
+.modal-container .text h2 {
+  opacity: 0;
+}
+.modal-container .wave {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 21%;
+  border-radius: 20px;
+}
+.modal-container .wave img {
+  width: 100%;
+  height: 55%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal-container .wave_true {
+  background-color: #b61666;
+}
+.modal-container .wave_dare {
+  background-color: #114fb2;
+}
+.modal-container .close {
+  position: absolute;
+  font-size: 40px;
+  left: 43%;
+  bottom: -9%;
+  background-color: transparent;
+  border-style: none;
+}
+.modal-container .close i {
+  color: #1c2022;
+}
+.modal-container.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-container.active h1 {
+  -webkit-animation: entradaTitulo 0.7s ease 0.3s forwards;
+          animation: entradaTitulo 0.7s ease 0.3s forwards;
+}
+.modal-container.active h2 {
+  -webkit-animation: entradaTexto 0.7s ease 0.4s forwards;
+          animation: entradaTexto 0.7s ease 0.4s forwards;
+}
+
+/* --------------------------
+        ANIMATION
+-------------------------- */
+@-webkit-keyframes entradaTitulo {
+  from {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes entradaTitulo {
+  from {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes entradaTexto {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes entradaTexto {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

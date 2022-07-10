@@ -1,33 +1,37 @@
 .blur {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: gray;
-    z-index: -1;
-    filter: blur(15px);
+    top: 0%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 0;
+    filter: blur(10px);
 }
 
 .modal-container {
-    position: absolute;
+    position: fixed;
     width: 80vw;
-    height: 90vh;
-    background-color: #1c2022;
-    border-radius: 15px;
-    box-shadow: 0 0 40px 50px whitesmoke;
-    img {
-        width: 100%;
-        height: 65%;
-        object-fit: cover;
-    }
+    height: 80vh;
+    top: 10%;
+    left: 10%;
+    background-color: $background-pop_up;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    transition: .5s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+    visibility: hidden;
     .kind {
         position: absolute;
-        top: 25%;
+        top: 20%;
         left: 7%;
         color: $text;
         font-family: $font-2;
         font-weight: bold;
-        font-size: 26px;
-        
+        font-size: 33px;
+        h1 {
+            opacity: 0;
+        }
     }
     .text {
         position: absolute;
@@ -37,6 +41,75 @@
         left: 7%;
         color: $text;
         font-family: $font-2;
+        font-size: 20px;
         font-weight: bold;
+        transition: .8s ease all;
+        h2 {
+            opacity: 0;
+        }
+    }
+    .wave {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        height: 21%;
+        border-radius: 20px;
+        img {
+            width: 100%;
+            height: 55%;
+            object-fit: cover;
+        }
+    }
+    .wave_true {
+        background-color: #b61666;
+    }
+    .wave_dare {
+        background-color: #114fb2;
+    }
+    .close {
+        position: absolute;
+        font-size: 40px;
+        left: 43%;
+        bottom: -9%;
+        background-color: transparent;
+        border-style: none;
+        i {
+            color: $background-pop_up;
+        }
+    }
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+        h1 {
+            animation: entradaTitulo .7s ease .3s forwards;
+        }
+        h2 {
+            animation: entradaTexto .7s ease .4s forwards;
+        }
+    }
+}
+
+/* --------------------------
+        ANIMATION
+-------------------------- */
+
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaTexto {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

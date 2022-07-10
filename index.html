@@ -18,49 +18,55 @@
 		></script>
 	</head>
 	<body>
-		<section class="top">
-			<div class="back">
-				<span class="one"></span>
-				<span class="two"></span>
-			</div>
-			<div class="btn">
-				<section class="img">
-					<img src="./assets/Icon-verdad.svg" alt="" />
-					<img src="./assets/Icon-Reto.svg" alt="" />
-				</section>
-				<button class="truth"></button>
-				<button class="dare"></button>
-			</div>
-			<div class="recharge">
-				<button class="start">
-					Start<!-- <img src="/assets/Rechar-Icon.svg" alt=""> -->
+		<div id="blur">
+			<section class="top">
+				<div class="back">
+					<span class="one"></span>
+					<span class="two"></span>
+				</div>
+				<div class="btn">
+					<section class="img">
+						<img src="./assets/Icon-verdad.svg" alt="" />
+						<img src="./assets/Icon-Reto.svg" alt="" />
+					</section>
+					<button class="truth" id="truth"></button>
+					<button class="dare" id="dare"></button>
+				</div>
+				<div class="recharge">
+					<button class="start">
+						Start<!-- <img src="/assets/Rechar-Icon.svg" alt=""> -->
+					</button>
+				</div>
+			</section>
+			<section class="players">
+				<article class="players__container">
+					<div class="player player-1"><h1>Echas</h1></div>
+					<div class="player player-2"><h1>Kevin</h1></div>
+					<div class="player player-3"><h1>Shifu</h1></div>
+					<div class="player player-4"><h1>Ewe</h1></div>
+				</article>
+				<button id="fullscreen">
+					<i class="fa-solid fa-up-right-and-down-left-from-center"></i>
 				</button>
-			</div>
-		</section>
-		<section class="players">
-			<article class="players__container">
-				<div class="player player-1"><h1>Echas</h1></div>
-				<div class="player player-2"><h1>Kevin</h1></div>
-				<div class="player player-3"><h1>Shifu</h1></div>
-				<div class="player player-4"><h1>Ewe</h1></div>
+			</section>
+		</div>
+		<div class="modal-container" id="modal-container">
+			<section class="wave" id="wave">
+				<img src="/assets/wave-haikei.svg" alt="" />
+			</section>
+			<article class="kind">
+				<h1 id="kind"></h1>
 			</article>
-			<button id="fullscreen">
-				<i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+			<article class="text">
+				<h2 id="text">
+					"Hacer ver que tienes una conversación vergonzosa por teléfono con
+					alguien, al lado de un extraño en la calle"
+				</h2>
+			</article>
+			<button class="close" id="close">
+				<i class="fa-solid fa-circle-xmark"></i>
 			</button>
-		</section>
-			<!-- <div class="modal-container">
-				<img src="/assets/wave-blue.svg" alt="" />
-				<article class="kind">
-					<h1>Reto</h1>
-				</article>
-				<article class="text">
-					<h2>
-						"habia una vez que empece a escribir y entonces sucedio algo muy
-						curioso"
-					</h2>
-				</article>
-				<div class="blur"></div>
-			</div> -->
+		</div>
 		<script src="./index.js"></script>
 	</body>
 </html>
