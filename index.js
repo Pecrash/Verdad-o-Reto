@@ -16,6 +16,9 @@
 const texto = document.getElementById('text')
 texto.innerText = objeto[2].pregunta */
 
+import { truth, randomTruth } from "./truth.js";
+import { dare, randomDare } from "./dare.js";
+
 /* ----------------------------------------
             FULLSCREEN
 ---------------------------------------- */
@@ -53,7 +56,7 @@ let btnTruth = document.getElementById("truth"),
     modal_container = document.getElementById("modal-container"),
     wave = document.getElementById("wave"),
     kind = document.getElementById("kind"),
-    text = document.getElementById("text");
+    next = 0;
 
 var tipo = '';
 
@@ -65,9 +68,11 @@ let pop_up = (tipo) => {
     if (tipo == 'truth') {
         wave.classList.add("wave_true")
         kind.innerText = "Verdad"
+        randomTruth(0, truth.length - 1)
     } else {
         wave.classList.add("wave_dare")
         kind.innerText = "Reto"
+        randomDare(0, dare.length - 1)
     }
 }
 
@@ -84,14 +89,83 @@ let pop_up_close = (tipo) => {
 
 btnTruth.addEventListener('click', function() {
     tipo = 'truth'
-    pop_up(tipo)
+    if(next == 1) {
+        pop_up(tipo)
+    } else {
+        alert()
+    }
 },false)
 
 btnDare.addEventListener('click', function() {
     tipo = 'dare'
-    pop_up(tipo)
+    if(next == 1) {
+        pop_up(tipo)
+    } else {
+        alert()
+    }
 }, false)
 
 btnClose.addEventListener('click', function() {
     pop_up_close(tipo)
+    next = 0
 }, false)
+
+/* ----------------------------------------
+                 SELECTION
+---------------------------------------- */
+let start = document.getElementById("start"),
+    random = 0,
+    contador = 0,
+    turnos = [],
+    anterior = random,
+    borrar = NaN,
+    player = NaN;
+
+function aleatorio(min, max) {
+    return Math.floor((Math.random() * (max - min + 1)) + min)
+}
+
+
+start.addEventListener('click', function() {
+    anterior = random
+    random = aleatorio(1, 6)
+    next = 1
+    /* Esto es para que no se repitan los ultimos 3 turnos
+    o los ultimos (número de jugadores/2) */
+    console.log(`random: ${random}`)
+
+        turnos.forEach( () => {
+            if (turnos.includes(random)) {
+                random = aleatorio(1, 6)
+                console.log(`soy del if: random ${random}`)
+            } if (contador >= 4) {
+                contador = 0
+            }
+        })
+
+    turnos[contador] = random
+    contador++
+
+    player = document.getElementById(`player-${random}`)
+    player.classList.add('active')
+
+    /* Esto remueve la clase active de cualquier jugador diferente del actual, 
+    probablemente pueda optimizarse mejor*/
+    for (let index = 1; index <= 6; index++) {
+        borrar = document.getElementById(`player-${index}`)
+        if(index != random) {
+            borrar.classList.remove('active')
+        }
+        console.log(`index: ${index}`, `random: ${random}`, `anterior: ${anterior}`)
+    }
+    console.log(`contador: ${contador}`)
+    console.log(`array: ${turnos}`)
+    console.log(player)
+
+    /* Esto simplemente funciona como scroll en la seccion de jugadores */
+    start.href = `#player-${random}`
+})
+
+/* ----------------------------------------
+                 ALERT
+---------------------------------------- */

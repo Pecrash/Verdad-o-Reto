@@ -127,6 +127,7 @@ body {
         align-items: center;
         width: 125px;
         height: 65%;
+        text-decoration: none;
         background-color: transparent;
         border: none;
         color: #CE4257;
@@ -173,6 +174,8 @@ body {
     background-color: $body;
     box-shadow: inset 0px 0px 4px 5px #1B1C2B;
     border-radius: 15px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .player {
@@ -190,19 +193,104 @@ body {
     border-color: #A0C4FF;
     border-radius: 15px;
     &.player-1 {
-        border-color: #FFADAD;
-        color: #FFADAD;
+        border-color: $player-1;
+        color: $player-1;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-1;
+            filter: brightness(1.2);
+        }
     }
     &.player-2 {
-        border-color: #A0C4FF;
-        color: #A0C4FF;
+        border-color: $player-2;
+        color: $player-2;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-2;
+            filter: brightness(1.2);
+        }
     }
     &.player-3 {
-        border-color: #FDFFB6;
-        color: #FDFFB6;
+        border-color: $player-3;
+        color: $player-3;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-3;
+            filter: brightness(1.2);
+        }
     }
     &.player-4 {
-        border-color: #FFC6FF;
-        color: #FFC6FF;
+        border-color: $player-4;
+        color: $player-4;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-4;
+            filter: brightness(1.2);
+        }
     }
+    &.player-5 {
+        border-color: $player-5;
+        color: $player-5;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-5;
+            filter: brightness(1.2);
+        }
+    }
+    &.player-6 {
+        border-color: $player-6;
+        color: $player-6;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-6;
+            filter: brightness(1.2);
+        }
+    }
+    &.player-7 {
+        border-color: $player-7;
+        color: $player-7;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-7;
+            filter: brightness(1.2);
+        }
+    }
+    &.player-8 {
+        border-color: $player-8;
+        color: $player-8;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-8;
+            filter: brightness(1.2);
+        }
+    }
+    &.player-9 {
+        border-color: $player-9;
+        color: $player-9;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-9;
+            filter: brightness(1.2);
+        }
+    }
+    &.player-10 {
+        border-color: $player-l0;
+        color: $player-l0;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-l0;
+            filter: brightness(1.2);
+        }
+    }
+    &.player-11 {
+        border-color: $player-ll;
+        color: $player-ll;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-ll;
+            filter: brightness(1.2);
+        }
+    }
+    &.player-12 {
+        border-color: $player-l2;
+        color: $player-l2;
+        &.active {
+            box-shadow: 0 0 10px 3px $player-l2;
+            filter: brightness(1.2);
+        }
+    }
+}
+
+.mood-btn {
+    background-color: #1B1C2B;
+    color: #1E75D1;
 }

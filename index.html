@@ -16,6 +16,7 @@
 			src="https://kit.fontawesome.com/91e0f90640.js"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</head>
 	<body>
 		<div id="blur">
@@ -33,17 +34,19 @@
 					<button class="dare" id="dare"></button>
 				</div>
 				<div class="recharge">
-					<button class="start">
-						Start
-					</button>
+					<a href="#player-5" class="start" id="start">
+						Next
+					</a>
 				</div>
 			</section>
 			<section class="players">
 				<article class="players__container">
-					<div class="player player-1"><h1>Echas</h1></div>
-					<div class="player player-2"><h1>Kevin</h1></div>
-					<div class="player player-3"><h1>Shifu</h1></div>
-					<div class="player player-4"><h1>Ewe</h1></div>
+					<div class="player player-1" id="player-1"><h1>Echas</h1></div>
+					<div class="player player-2" id="player-2"><h1>Kevin</h1></div>
+					<div class="player player-3" id="player-3"><h1>Shifu</h1></div>
+					<div class="player player-4" id="player-4"><h1>Ewe</h1></div>
+					<div class="player player-5" id="player-5"><h1>Ramiro</h1></div>
+					<div class="player player-6" id="player-6"><h1>Roberto</h1></div>
 				</article>
 				<button id="fullscreen">
 					<i class="fa-solid fa-up-right-and-down-left-from-center"></i>
@@ -67,6 +70,11 @@
 				<i class="fa-solid fa-circle-xmark"></i>
 			</button>
 		</div>
-		<script src="./index.js"></script>
+		<script src="./index.js" type="module"></script>
+		<script type="text/javascript">
+			function alert() {
+    			swal({title: 'Oops', text: 'presiona el botón de next para continuar', icon: 'error'})
+			}
+		</script>
 	</body>
 </html>

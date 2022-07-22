@@ -1,3 +1,4 @@
+/* Players */
 .blur {
   position: fixed;
   width: 100vw;
@@ -5,7 +6,8 @@
   top: 0%;
   background: rgba(0, 0, 0, 0.15);
   z-index: 0;
-  filter: blur(10px);
+  -webkit-animation: blur 0.7s ease 0.3s forwards;
+          animation: blur 0.7s ease 0.3s forwards;
 }
 
 .modal-container {
@@ -17,9 +19,7 @@
   background-color: #1c2022;
   border-radius: 20px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
-  transition: 0.5s ease all;
-  transform: scale(0.7);
-  opacity: 0;
+  /* transition: .5s ease all; */
   visibility: hidden;
 }
 .modal-container .kind {
@@ -80,22 +80,61 @@
   color: #1c2022;
 }
 .modal-container.active {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
+  -webkit-animation: entrada 0.7s ease 0.3s forwards;
+          animation: entrada 0.7s ease 0.3s forwards;
 }
 .modal-container.active h1 {
-  -webkit-animation: entradaTitulo 0.7s ease 0.3s forwards;
-          animation: entradaTitulo 0.7s ease 0.3s forwards;
+  -webkit-animation: entradaTitulo 0.7s ease 0.6s forwards;
+          animation: entradaTitulo 0.7s ease 0.6s forwards;
 }
 .modal-container.active h2 {
-  -webkit-animation: entradaTexto 0.7s ease 0.4s forwards;
-          animation: entradaTexto 0.7s ease 0.4s forwards;
+  -webkit-animation: entradaTexto 0.7s ease 0.7s forwards;
+          animation: entradaTexto 0.7s ease 0.7s forwards;
 }
 
 /* --------------------------
         ANIMATION
 -------------------------- */
+@-webkit-keyframes blur {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(10px);
+  }
+}
+@keyframes blur {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(10px);
+  }
+}
+@-webkit-keyframes entrada {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes entrada {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @-webkit-keyframes entradaTitulo {
   from {
     transform: translateY(-25px);
@@ -259,6 +298,7 @@ body {
   align-items: center;
   width: 125px;
   height: 65%;
+  text-decoration: none;
   background-color: transparent;
   border: none;
   color: #CE4257;
@@ -304,6 +344,8 @@ body {
   background-color: #2B2D42;
   box-shadow: inset 0px 0px 4px 5px #1B1C2B;
   border-radius: 15px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .player {
@@ -325,15 +367,100 @@ body {
   border-color: #FFADAD;
   color: #FFADAD;
 }
+.player.player-1.active {
+  box-shadow: 0 0 10px 3px #FFADAD;
+  filter: brightness(1.2);
+}
 .player.player-2 {
   border-color: #A0C4FF;
   color: #A0C4FF;
+}
+.player.player-2.active {
+  box-shadow: 0 0 10px 3px #A0C4FF;
+  filter: brightness(1.2);
 }
 .player.player-3 {
   border-color: #FDFFB6;
   color: #FDFFB6;
 }
+.player.player-3.active {
+  box-shadow: 0 0 10px 3px #FDFFB6;
+  filter: brightness(1.2);
+}
 .player.player-4 {
   border-color: #FFC6FF;
   color: #FFC6FF;
+}
+.player.player-4.active {
+  box-shadow: 0 0 10px 3px #FFC6FF;
+  filter: brightness(1.2);
+}
+.player.player-5 {
+  border-color: #bdb2ff;
+  color: #bdb2ff;
+}
+.player.player-5.active {
+  box-shadow: 0 0 10px 3px #bdb2ff;
+  filter: brightness(1.2);
+}
+.player.player-6 {
+  border-color: #caffbf;
+  color: #caffbf;
+}
+.player.player-6.active {
+  box-shadow: 0 0 10px 3px #caffbf;
+  filter: brightness(1.2);
+}
+.player.player-7 {
+  border-color: #ffd6a5;
+  color: #ffd6a5;
+}
+.player.player-7.active {
+  box-shadow: 0 0 10px 3px #ffd6a5;
+  filter: brightness(1.2);
+}
+.player.player-8 {
+  border-color: #f694c1;
+  color: #f694c1;
+}
+.player.player-8.active {
+  box-shadow: 0 0 10px 3px #f694c1;
+  filter: brightness(1.2);
+}
+.player.player-9 {
+  border-color: #ebd2b4;
+  color: #ebd2b4;
+}
+.player.player-9.active {
+  box-shadow: 0 0 10px 3px #ebd2b4;
+  filter: brightness(1.2);
+}
+.player.player-10 {
+  border-color: #a1fcdf;
+  color: #a1fcdf;
+}
+.player.player-10.active {
+  box-shadow: 0 0 10px 3px #a1fcdf;
+  filter: brightness(1.2);
+}
+.player.player-11 {
+  border-color: #edede9;
+  color: #edede9;
+}
+.player.player-11.active {
+  box-shadow: 0 0 10px 3px #edede9;
+  filter: brightness(1.2);
+}
+.player.player-12 {
+  border-color: #7161ef;
+  color: #7161ef;
+}
+.player.player-12.active {
+  box-shadow: 0 0 10px 3px #7161ef;
+  filter: brightness(1.2);
+}
+
+.mood-btn {
+  background-color: #1B1C2B;
+  color: #1E75D1;
 }/*# sourceMappingURL=main.css.map */
