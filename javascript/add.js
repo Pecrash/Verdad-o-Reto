@@ -1,0 +1,44 @@
+export let btnAdd = document.getElementById("btn-add")
+export let add_p = []
+let count = 0
+let bandera = 1
+
+let agregar = () => {
+    const input = document.getElementById("input").value;
+
+	if (count < 12 && input.length > 0) {
+		add_p.push(input);
+		count++;
+		let box = document.getElementById(`box-${count}`);
+		add_p.forEach(() => {
+			if (!box.classList.contains("active")) {
+				box.classList.add("active");
+                box.innerText = input
+			}
+		});
+	} else {
+        if(count >= 12) {
+            alert()
+        }
+    }
+    form.reset();
+	console.log(add_p);
+    console.log(input.length)
+};
+
+/* if(bandera == 1) {
+	
+} */
+btnAdd.addEventListener("click", agregar);
+
+/* para agregar los jugadores a la siguiente sección */
+
+/* const comenzar = document.getElementById("comenzar") */
+const main = document.getElementById("players__container")
+
+/* comenzar.addEventListener("click", function() {
+    count = "continuar"
+    console.log('presionado')
+}, false) */
+
+console.log(main)

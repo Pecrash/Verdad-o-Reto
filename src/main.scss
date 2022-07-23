@@ -1,10 +1,25 @@
 @import 'config';
 @import 'modal-window';
+@import 'players';
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+h2 {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 
 body {
@@ -36,7 +51,6 @@ body {
     &:active {
         box-shadow: 0px 0px 36px 10px  rgba(235, 56, 153, 1.2);
         width: 48vw;
-        height: 38vh;
     }
     &, &::before, &::after {
         background: rgba(255, 255, 255, 0.14);
@@ -44,9 +58,6 @@ body {
         border-radius: 30px;
         border: 1px solid rgba(255, 255, 255, 0.21);
         transition: 0.2s;
-        /* background-image: url(/assets/Icon-verdad.svg);
-        background-repeat: no-repeat;
-        background-position: center; */
     }
 }
 
@@ -58,17 +69,13 @@ body {
     &:active {
         box-shadow: 0px 0px 36px 10px  rgba(31, 38, 255, 1.2);
         width: 48vw;
-        height: 38vh;
     }
     &, &::before, &::after {
         background: rgba(255, 255, 255, 0.14);
-        box-shadow: 0 10px 25px 0 rgba(31, 38, 135, 0.37);
+        box-shadow: 0 10px 25px 0 rgba(31, 38, 135, 0.67);
         border-radius: 30px;
         border: 1px solid rgba(255, 255, 255, 0.21);
         transition: 0.2s;
-        /* background-image: url(/assets/Icon-Reto.svg);
-        background-repeat: no-repeat;
-        background-position: center; */
     }
 }
 
@@ -136,6 +143,10 @@ body {
         font-family: $font-2;
         border: solid 2px #CE4257;
         border-radius: 15px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
         &:active {
             box-shadow: 0px 0px 15px 4px #CE4257;
         }
@@ -147,7 +158,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 55vh;
-    button {
+    .fullscreen {
         position: absolute;
         width: 35px;
         height: 35px;
@@ -160,6 +171,9 @@ body {
         opacity: 80%;
         i {
             font-size: 30px;
+        }
+        &.inicio {
+            top: 20%;
         }
     }
 }
@@ -192,6 +206,7 @@ body {
     border-width: 5px;
     border-color: #A0C4FF;
     border-radius: 15px;
+    /* visibility: hidden; */
     &.player-1 {
         border-color: $player-1;
         color: $player-1;
@@ -288,9 +303,4 @@ body {
             filter: brightness(1.2);
         }
     }
-}
-
-.mood-btn {
-    background-color: #1B1C2B;
-    color: #1E75D1;
 }

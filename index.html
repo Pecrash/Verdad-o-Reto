@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./css/main.css" />
 		<title>Buberrimo's Game</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="stylesheet" href="/css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@400;500;600&display=swap"
@@ -19,61 +19,42 @@
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</head>
 	<body>
-		<div id="blur">
-			<section class="top">
-				<div class="back">
-					<span class="one"></span>
-					<span class="two"></span>
-				</div>
-				<div class="btn">
-					<section class="img">
-						<img src="./assets/Icon-verdad.svg" alt="" />
-						<img src="./assets/Icon-Reto.svg" alt="" />
-					</section>
-					<button class="truth" id="truth"></button>
-					<button class="dare" id="dare"></button>
-				</div>
-				<div class="recharge">
-					<a href="#player-5" class="start" id="start">
-						Next
-					</a>
-				</div>
-			</section>
+        <div class="body">
+			<form class="form" id="form">
+				<input type="text" required maxlength="7" id="input"/>
+				<label class="lbl">
+					<span class="text-name">Nombre jugador</span>
+				</label>
+			</form>
 			<section class="players">
-				<article class="players__container">
-					<div class="player player-1" id="player-1"><h1>Echas</h1></div>
-					<div class="player player-2" id="player-2"><h1>Kevin</h1></div>
-					<div class="player player-3" id="player-3"><h1>Shifu</h1></div>
-					<div class="player player-4" id="player-4"><h1>Ewe</h1></div>
-					<div class="player player-5" id="player-5"><h1>Ramiro</h1></div>
-					<div class="player player-6" id="player-6"><h1>Roberto</h1></div>
-				</article>
-				<button id="fullscreen">
+				<button class="fullscreen inicio" id="fullscreen">
 					<i class="fa-solid fa-up-right-and-down-left-from-center"></i>
 				</button>
 			</section>
+			<button class="agregar button" id="btn-add">agregar</button>
+			<a href="./game.html" class="comenzar button" id="comenzar"> comenzar </a>
 		</div>
-		<div class="modal-container" id="modal-container">
-			<section class="wave" id="wave">
-				<img src="/assets/wave-haikei.svg" alt="" />
-			</section>
-			<article class="kind">
-				<h1 id="kind"> </h1>
-			</article>
-			<article class="text">
-				<h2 id="text">
-					"Hacer ver que tienes una conversación vergonzosa por teléfono con
-					alguien, al lado de un extraño en la calle"
-				</h2>
-			</article>
-			<button class="close" id="close">
-				<i class="fa-solid fa-circle-xmark"></i>
-			</button>
+		<div class="added">
+			<h1>Buberrimo's Game</h1>
+			<div class="added_container">
+				<div class="player_box player-1" id="box-1"></div>
+				<div class="player_box player-2" id="box-2"></div>
+				<div class="player_box player-3" id="box-3"></div>
+				<div class="player_box player-4" id="box-4"></div>
+				<div class="player_box player-5" id="box-5"></div>
+				<div class="player_box player-6" id="box-6"></div>
+				<div class="player_box player-7" id="box-7"></div>
+				<div class="player_box player-8" id="box-8"></div>
+				<div class="player_box player-9" id="box-9"></div>
+				<div class="player_box player-10" id="box-10"></div>
+				<div class="player_box player-11" id="box-11"></div>
+				<div class="player_box player-12" id="box-12"></div>
+			</div>
 		</div>
-		<script src="./index.js" type="module"></script>
+		<script src="/javascript/add.js" type="module"></script>
 		<script type="text/javascript">
 			function alert() {
-    			swal({title: 'Oops', text: 'presiona el botón de next para continuar', icon: 'error'})
+    			swal({title: 'Oops', text: 'Se ha alcanzado el maximo de jugadores', icon: 'error'})
 			}
 		</script>
 	</body>

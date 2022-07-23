@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Buberrimo's Game</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/91e0f90640.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	</head>
+	<body>
+		<div id="blur">
+			<section class="top">
+				<div class="back">
+					<span class="one"></span>
+					<span class="two"></span>
+				</div>
+				<div class="btn">
+					<section class="img">
+						<img src="./assets/Icon-verdad.svg" alt="" />
+						<img src="./assets/Icon-Reto.svg" alt="" />
+					</section>
+					<button class="truth" id="truth"></button>
+					<button class="dare" id="dare"></button>
+				</div>
+				<div class="recharge">
+					<a href="#player-5" class="start" id="start">
+						Next
+					</a>
+				</div>
+			</section>
+			<section class="players">
+				<article class="players__container" id="players__container">
+					<!-- <div class="player player-1" id="player-1"><h1>Echas</h1></div>
+					<div class="player player-2" id="player-2"><h1>Kevin</h1></div>
+					<div class="player player-3" id="player-3"><h1>Shifu</h1></div>
+					<div class="player player-4" id="player-4"><h1>Ewe</h1></div>
+					<div class="player player-5" id="player-5"><h1>Ramiro</h1></div>
+					<div class="player player-6" id="player-6"><h1>Roberto</h1></div> -->
+				</article>
+				<button class="fullscreen" id="fullscreen">
+					<i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+				</button>
+			</section>
+		</div>
+		<div id="btn-add"></div>
+		<div class="modal-container" id="modal-container">
+			<section class="wave" id="wave">
+				<img src="/assets/wave-haikei.svg" alt="" />
+			</section>
+			<article class="kind">
+				<h1 id="kind"> </h1>
+			</article>
+			<article class="text">
+				<h2 id="text">
+					"Hacer ver que tienes una conversación vergonzosa por teléfono con
+					alguien, al lado de un extraño en la calle"
+				</h2>
+			</article>
+			<button class="close" id="close">
+				<i class="fa-solid fa-circle-xmark"></i>
+			</button>
+		</div>
+		<script src="/javascript/index.js" type="module"></script>
+		<script type="text/javascript">
+			function alert() {
+    			swal({title: 'Oops', text: 'presiona el botón de next para continuar', icon: 'error'})
+			}
+		</script>
+	</body>
+</html>
