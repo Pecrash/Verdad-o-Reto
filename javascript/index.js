@@ -18,7 +18,6 @@ texto.innerText = objeto[2].pregunta */
 
 import { truth, randomTruth } from "/javascript/truth.js";
 import { dare, randomDare } from "/javascript/dare.js";
-import {add_p,btnAdd} from "/javascript/add.js"
 
 /* ----------------------------------------
             FULLSCREEN
@@ -49,18 +48,19 @@ screen.addEventListener("click", fullscreen);
 /* ----------------------------------------
             ADD PLAYERS
 ---------------------------------------- */
+let add_p = JSON.parse(localStorage.getItem("nombres"))
+let main = document.getElementById("players__container")
+let num = 1
+let total = add_p.length
 
-/* add_p.forEach((item) => {
-    let num = 1
+add_p.forEach((item) => {
     const div = document.createElement("div")
     div.textContent = item
     main.appendChild(div)
-    div.classList.add(`player player-${num}`)
+    div.classList.add("player", `player-${num}`)
+	div.setAttribute("id",`player-${num}`);
     num++
-    console.log(item)
-}) */
-
-console.log(add_p)
+})
 
 /* ----------------------------------------
             POP UP WINDOW
@@ -156,18 +156,16 @@ function aleatorio(min, max) {
 
 start.addEventListener("click", function () {
 	anterior = random;
-	random = aleatorio(1, 6);
+	random = aleatorio(1, total);
 	next = 1;
 	/* Esto es para que no se repitan los ultimos 3 turnos
     o los ultimos (número de jugadores/2) */
-	console.log(`random: ${random}`);
 
 	turnos.forEach(() => {
 		if (turnos.includes(random)) {
-			random = aleatorio(1, 6);
-			console.log(`soy del if: random ${random}`);
+			random = aleatorio(1, total);
 		}
-		if (contador >= 4) {
+		if (contador >= total/2) {
 			contador = 0;
 		}
 	});
@@ -180,20 +178,12 @@ start.addEventListener("click", function () {
 
 	/* Esto remueve la clase active de cualquier jugador diferente del actual, 
     probablemente pueda optimizarse mejor*/
-	for (let index = 1; index <= 6; index++) {
+	for (let index = 1; index <= total; index++) {
 		borrar = document.getElementById(`player-${index}`);
 		if (index != random) {
 			borrar.classList.remove("active");
 		}
-		console.log(
-			`index: ${index}`,
-			`random: ${random}`,
-			`anterior: ${anterior}`
-		);
 	}
-	console.log(`contador: ${contador}`);
-	console.log(`array: ${turnos}`);
-	console.log(player);
 
 	/* Esto simplemente funciona como scroll en la seccion de jugadores */
 	start.href = `#player-${random}`;

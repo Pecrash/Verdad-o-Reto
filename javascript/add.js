@@ -1,7 +1,6 @@
-export let btnAdd = document.getElementById("btn-add")
-export let add_p = []
+let btnAdd = document.getElementById("btn-add")
+let add_p = []
 let count = 0
-let bandera = 1
 
 let agregar = () => {
     const input = document.getElementById("input").value;
@@ -33,12 +32,11 @@ btnAdd.addEventListener("click", agregar);
 
 /* para agregar los jugadores a la siguiente sección */
 
-/* const comenzar = document.getElementById("comenzar") */
+const comenzar = document.getElementById("comenzar")
 const main = document.getElementById("players__container")
 
-/* comenzar.addEventListener("click", function() {
-    count = "continuar"
-    console.log('presionado')
-}, false) */
+comenzar.addEventListener("click", function() {
+    localStorage.setItem("nombres", JSON.stringify(add_p))
+}, false)
 
 console.log(main)
