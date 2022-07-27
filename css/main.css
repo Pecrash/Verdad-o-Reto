@@ -585,7 +585,6 @@ body {
   border-width: 5px;
   border-color: #A0C4FF;
   border-radius: 15px;
-  /* visibility: hidden; */
 }
 .player.player-1 {
   border-color: #FFADAD;
@@ -682,4 +681,8 @@ body {
 .player.player-12.active {
   box-shadow: 0 0 10px 3px #7161ef;
   filter: brightness(1.2);
+}
+
+.danger {
+  visibility: hidden;
 }/*# sourceMappingURL=main.css.map */

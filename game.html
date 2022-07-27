@@ -5,6 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/main.css" />
+		<link
+			rel="stylesheet"
+			href="./css/desktop.css"
+			media="screen and (min-width: 460px)"
+		/>
 		<title>Buberrimo's Game</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,9 +39,7 @@
 					<button class="dare" id="dare"></button>
 				</div>
 				<div class="recharge">
-					<a href="#player-5" class="start" id="start">
-						Next
-					</a>
+					<a href="#player-5" class="start" id="start"> Next </a>
 				</div>
 			</section>
 			<section class="players">
@@ -59,22 +62,28 @@
 				<img src="/assets/wave-haikei.svg" alt="" />
 			</section>
 			<article class="kind">
-				<h1 id="kind"> </h1>
+				<h1 id="kind"></h1>
 			</article>
 			<article class="text">
 				<h2 id="text">
-					"Hacer ver que tienes una conversación vergonzosa por teléfono con
-					alguien, al lado de un extraño en la calle"
+					"Agáchate hacia adelante"
 				</h2>
 			</article>
 			<button class="close" id="close">
 				<i class="fa-solid fa-circle-xmark"></i>
 			</button>
 		</div>
+		<div class="danger">
+			<h1></h1>
+		</div>
 		<script src="/javascript/index.js" type="module"></script>
 		<script type="text/javascript">
 			function alert() {
-    			swal({title: 'Oops', text: 'presiona el botón de next para continuar', icon: 'error'})
+				swal({
+					title: "Oops",
+					text: "presiona el botón de next para continuar",
+					icon: "error",
+				});
 			}
 		</script>
 	</body>

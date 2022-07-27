@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.danger {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 85vw;
+	height: 90vh;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	background-color: #1c2022;
+	border-radius: 30px;
+	visibility: visible;
+}
+
+.danger h1 {
+    width: 90%;
+}
+
+.danger h1::after {
+    content: "Aún no funcionamos en estas dimensiones de pantalla, es posible que tu dispositivo sea de escritorio o lo tengas en orientación horizontal";
+	word-break: normal;
+	font-family: "Fredoka One", cursive;
+	font-size: 40px;
+	color: #fff;
+}

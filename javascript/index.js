@@ -165,7 +165,7 @@ start.addEventListener("click", function () {
 		if (turnos.includes(random)) {
 			random = aleatorio(1, total);
 		}
-		if (contador >= total/2) {
+		if (contador >= Math.floor(total/2)) {
 			contador = 0;
 		}
 	});

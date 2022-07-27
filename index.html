@@ -6,7 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Buberrimo's Game</title>
 		<link rel="stylesheet" href="/css/main.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="stylesheet"
+			href="./css/desktop.css"
+			media="screen and (min-width: 460px)"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@400;500;600&display=swap"
@@ -19,9 +24,9 @@
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</head>
 	<body>
-        <div class="body">
+		<div class="body">
 			<form class="form" id="form">
-				<input type="text" required maxlength="7" id="input"/>
+				<input type="text" required maxlength="7" id="input" />
 				<label class="lbl">
 					<span class="text-name">Nombre jugador</span>
 				</label>
@@ -51,10 +56,19 @@
 				<div class="player_box player-12" id="box-12"></div>
 			</div>
 		</div>
+		<div class="danger">
+			<h1>
+				
+			</h1>
+		</div>
 		<script src="/javascript/add.js"></script>
 		<script type="text/javascript">
 			function alert() {
-    			swal({title: 'Oops', text: 'Se ha alcanzado el maximo de jugadores', icon: 'error'})
+				swal({
+					title: "Oops",
+					text: "Se ha alcanzado el maximo de jugadores",
+					icon: "error",
+				});
 			}
 		</script>
 	</body>
