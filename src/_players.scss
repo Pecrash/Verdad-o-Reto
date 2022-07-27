@@ -7,7 +7,7 @@
 }
 
 .form {
-	width: 90vw;
+	width: 90%;
 	height: 50px;
 	position: absolute;
 	top: 8%;
@@ -71,8 +71,8 @@
 	justify-content: center;
 	align-items: center;
 	/* background-color: $background-pop_up; */
-	width: 30vw;
-	height: 7vh;
+	width: 30%;
+	height: 7%;
 	border-radius: 30px;
 	overflow: hidden;
 	color: #fff;
@@ -108,7 +108,7 @@
 
 .agregar {
     position: absolute;
-    top: 18vh;
+    top: 18%;
     background: none;
     border: none;
     font-family: $font-2;
@@ -133,8 +133,8 @@
     position: absolute;
     top: 35%;
     left: 5%;
-    width: 90vw;
-    height: 50vh;
+    width: 90%;
+    height: 50%;
 	h1 {
 		position: absolute;
 		left: 10%;
