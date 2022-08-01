@@ -3,15 +3,14 @@
 .body {
 	display: flex;
 	justify-content: center;
-	/* align-items: center; */
-	min-height: 514px;
+	align-items: flex-start;
 }
 
 .form {
 	width: 90%;
 	height: 50px;
-	position: absolute;
-	top: 8%;
+	position: fixed;
+	margin-top: 8%;
 	overflow: hidden;
 	font-size: 20px;
 	input {
@@ -107,9 +106,9 @@
 }
 
 .agregar {
-    position: absolute;
-    top: 17%;
-	/* height: 50px; */
+    position: fixed;
+    margin-top: 30%;
+	height: 45px;
     background: none;
     border: none;
     font-family: $font-2;
@@ -118,10 +117,11 @@
 }
 
 .comenzar {
-	position: absolute;
-	bottom: 2%;
+	position: fixed;
+	align-self: flex-end;
+	margin-top: 15%;
 	right: 5%;
-	/* height: 50px; */
+	height: 45px;
 	text-decoration: none;
 	font-family: $font-2;
 	color: #fff;
@@ -132,17 +132,17 @@
     background-color: #fff;
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 35%;
-    left: 5%;
+    position: relative;
+    margin-top: 60%;
     width: 90%;
-    height: 50%;
+    max-height: 380px;
+	min-height: 350px;
 	h1 {
 		position: absolute;
 		left: 10%;
 		font-size: 50px;
 		font-family: $font-2;
-		color: #0b090a;
+		color: #2d2d2d;
 		filter: blur(2px);
 		z-index: -1;
 		font-style: italic;
@@ -161,7 +161,7 @@
 	justify-content: space-around;
 	align-items: center;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 	.player_box {
 		display: flex;
 		justify-content: center;
