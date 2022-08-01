@@ -173,7 +173,16 @@ body {
             font-size: 30px;
         }
         &.inicio {
-            top: 20%;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        align-self: flex-start;
+        background-color: transparent;
+        border-style: none;
+        cursor: pointer;
+        top: 20%;
+        right: 3%;
+        opacity: 80%;
         }
     }
 }

@@ -176,6 +176,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  min-height: 577px;
 }
 
 .form {
@@ -307,7 +308,7 @@
   left: 10%;
   font-size: 50px;
   font-family: "Fredoka", sans-serif;
-  color: #2d2d2d;
+  color: #030303;
   filter: blur(2px);
   z-index: -1;
   font-style: italic;
@@ -325,7 +326,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  min-height: 100%;
+  height: 350px;
 }
 .added_container .player_box {
   display: flex;
@@ -556,7 +557,16 @@ body {
   font-size: 30px;
 }
 .players .fullscreen.inicio {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  align-self: flex-start;
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
   top: 20%;
+  right: 3%;
+  opacity: 80%;
 }
 
 .players__container {
